@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - DreamsEstate</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #2e7d32; /* Requested background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container Card */
+        .container {
+            background: #fff;
+            padding: 30px;
+            width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateY(-5px); /* Subtle hover effect */
+        }
+
+        /* Logo Styling */
+        .logo {
+            max-width: 80px;
+            margin-bottom: 10px;
+        }
+
+        /* Heading */
+        h2 {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #2e7d32;
+            outline: none;
+            box-shadow: 0 0 5px rgba(32, 191, 107, 0.5);
+        }
+
+        /* Remember Me Styling */
+        .remember-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .remember-container input {
+            width: auto;
+            transform: scale(1.2);
+        }
+
+        .remember-container label {
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* Signup Button */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #2e7d32;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #2e7d32;
+            transform: scale(1.05);
+        }
+
+        /* Sign In Link */
+        .signin-link {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .signin-link a {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .signin-link a:hover {
+            text-decoration: underline;
+            color: #2e7d32;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.jpeg" alt="DreamsEstate Logo" class="logo">
+        <h2>Create Your Account</h2>
+        <form action="register.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="username" placeholder="Enter Your Full Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" placeholder="Create a Password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password *</label>
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Re-enter Password" required>
+            </div>
+            <div class="remember-container">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <p class="signin-link">Already have an account? <a href="login.html">Sign In</a></p>
+    </div>
+</body>
+</html>

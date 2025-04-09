@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - DreamsEstate</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #2e7d32;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container Card */
+        .login-container {
+            background: #fff;
+            padding: 30px;
+            width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .login-container:hover {
+            transform: translateY(-5px); /* Hover effect */
+        }
+
+        /* Logo Styling */
+        .logo-container {
+            margin-bottom: 10px;
+        }
+
+        .logo-icon {
+            max-width: 80px;
+        }
+
+        /* Heading */
+        h2 {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styling */
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #2e7d32;
+            outline: none;
+            box-shadow: 0 0 5px rgba(32, 191, 107, 0.5);
+        }
+
+        /* Remember Me and Forgot Password */
+        .remember-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .remember-container input {
+            margin-right: 8px;
+            transform: scale(1.2);
+        }
+
+        .forgot-password {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+            color: #18a558;
+        }
+
+        /* Sign-In Button */
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background: #2e7d32;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease-in-out;
+        }
+
+        .btn-login:hover {
+            background: #18a558;
+            transform: scale(1.05);
+        }
+
+        /* Sign Up Link */
+        .signup-link {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .signup-link a {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+            color: #2e7d32;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="DreamsEstate Logo" class="logo-icon">
+        </div>
+        <h2>Hey There! Welcome Back.</h2>
+        <form action="login.php" method="POST">
+            <div class="input-group">
+                <label for="email">Email *</label>
+                <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password *</label>
+                <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+            </div>
+            <div class="remember-container">
+                <label>
+                    <input type="checkbox" id="remember-me"> Remember me
+                </label>
+                <a href="forgot_password.php" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn-login">Sign In</button>
+        </form>
+        <p class="signup-link">New to TrueEstate? <a href="register.html">Sign Up</a></p>
+    </div>
+</body>
+</html>
